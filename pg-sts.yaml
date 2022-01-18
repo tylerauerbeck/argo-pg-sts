@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: StatefulSet
-  metadata:
+metadata:
   name: postgresql-db
 spec:
   serviceName: postgresql-db-service
@@ -26,7 +26,7 @@ spec:
               value: /data/pgdata
   volumeClaimTemplates:
     - metadata:
-      name: postgresql-db-disk
+        name: postgresql-db-disk
       spec:
         accessModes: ["ReadWriteOnce"]
         resources:
