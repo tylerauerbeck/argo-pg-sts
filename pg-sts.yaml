@@ -27,6 +27,8 @@ spec:
   volumeClaimTemplates:
     - metadata:
         name: postgresql-db-disk
+        annotations:
+          hello: "world"
       spec:
         accessModes: ["ReadWriteOnce"]
         resources:
